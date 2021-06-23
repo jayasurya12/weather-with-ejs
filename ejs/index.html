@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app ejs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+      img{
+        height: 600px;
+        width: 100%;
+        opacity: 0.8;
+      }
+      img::after{
+      
+        background-color: black;
+      }
+      section{
+        position: relative;
+        opacity: 0.8;
+        top: -45rem;
+      }
+      @media(max-width:1080px){
+        .container{
+          position: relative;
+          top: 10rem;
+        }
+      }
+      @media(max-width:860px){
+        .container{
+          position: relative;
+          top: 20rem;
+        }
+        h2,h3,h5{
+          font-size: large;
+        }
+      }
+      @media(max-width:632px){
+        .container{
+          position: relative;
+          top: 23rem;
+        }
+        h2,h3,h5{
+          font-size: large;
+        }
+      }
+      @media(max-width:540px){
+        .container{
+          position: relative;
+          top: 25rem;
+        }
+        h2,h3,h5{
+          font-size: medium;
+        }
+      }
+    </style>
+</head>
+<body>
+  <img src="images/man.jpg" class="img-fluid  img-thumbnail" alt="man"/>
+
+ 
+    <div class="container">
+      <section>
+        <form action="/weather_data" method="POST">
+    <div class="card text-center">
+        <div class="card-header">
+          <h2>Weather App</h2>
+        </div>
+        <div class="text-black-50"><h4>Live Weather</h4></div>
+    </div>
+    <div class="card text-center">
+        <div class="card-body"><h3 class="card-title">World Weather Report</h3>       
+            <div class="row height d-flex justify-content-center align-items-center">
+              <div class="col-md-6">
+                  <span><h5>City Name :</h5></span>
+                  <div class="form Search" > 
+                    <i class="fa fa-search"></i> 
+                    <input type="text" name="search" class="form-control form-input col-md-6" placeholder="Search anything...">
+                    <span class="left-pan"><i class="fa fa-microphone"></i></span> 
+                  </div>
+              </div>
+            </div><br>
+            <button type="submit" class="btn btn-primary">Check</button>
+            
+          </div>
+        <div class="card-footer text-muted">
+          Designed by Jayasurya V
+        </div>
+      </div>
+    </section>
+    </div>
+
+  </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    
+</body>
+</html>
